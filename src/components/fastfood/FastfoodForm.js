@@ -29,8 +29,10 @@ class FastfoodForm extends Component {
 			.then(response => {
 				console.log(response);
 				this.fastFoodArray.push(response);
+				alert('Fastfood cadastrado com sucesso!\n' + JSON.stringify(response.data));
 			})
 			.catch(error => {
+				alert('Ocorreu um erro, consulte os logs!');
 				console.log(error);
 			})
 	}
