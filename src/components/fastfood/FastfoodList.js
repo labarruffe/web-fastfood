@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import axios from 'axios'
+import React, { Component } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class FastfoodList extends Component {
     baseUrl = 'http://localhost:4200';
@@ -28,17 +29,19 @@ class FastfoodList extends Component {
         const { fastfoods } = this.state;
         return (
             <div>
-            <br/>
-            <br/>    
-            Lista de Fastfoods
-            <br/>
-            <br/>
-            {fastfoods.map(fastfood => 
-                <div key={fastfood.id}>
-                    {fastfood.name} - {fastfood.price} - {fastfood.ingredients}
-                    <br/><br/>
-                </div>
-            )}
+                <br/>
+                <br/>    
+                Lista de Fastfoods
+                <br/>
+                <br/>
+                {fastfoods.map(fastfood => 
+                    <div key={fastfood.id}>
+                        {fastfood.name} - {fastfood.price} - {fastfood.ingredients}
+                        <br/><br/>
+                    </div>
+                )}
+                <br/><br/>
+                <Link to="/">Cadastrar fastfood</Link>
             </div>
         )
     }

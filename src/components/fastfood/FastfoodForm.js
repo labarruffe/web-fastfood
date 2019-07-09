@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import axios from 'axios'
-
+import React, { Component } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 class FastfoodForm extends Component {
 	baseUrl = 'http://localhost:4200';
 
@@ -48,8 +48,7 @@ class FastfoodForm extends Component {
 					onChange={this.changeHandler}
 				/>
 				</label>
-				<br />
-				<br />
+				<br /><br />
 				<label>
 				Ingredientes
 				<br />
@@ -60,8 +59,7 @@ class FastfoodForm extends Component {
 					onChange={this.changeHandler}
 				/>
 				</label>
-				<br />		
-				<br />
+				<br /><br />	
 				<label>
 				Valor
 				<br />
@@ -73,9 +71,10 @@ class FastfoodForm extends Component {
 					onChange={this.changeHandler}
 				/>
 				</label>
-				<br />
-				<br />
+				<br /><br />
 				<button type="submit">Salvar</button>
+				<br /><br />
+				<Link to="/list">Lista de fastfoods</Link>
 			</form>
 		)
 	}
