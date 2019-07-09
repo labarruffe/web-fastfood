@@ -4,8 +4,6 @@ import axios from 'axios'
 class FastfoodForm extends Component {
 	baseUrl = 'http://localhost:4200';
 
-	fastFoodArray = [];
-	
 	constructor(props) {
 		super(props);
 
@@ -28,7 +26,6 @@ class FastfoodForm extends Component {
 			.post(`${this.baseUrl}/fastfoods`, this.state)
 			.then(response => {
 				console.log(response);
-				this.fastFoodArray.push(response);
 				alert('Fastfood cadastrado com sucesso!\n' + JSON.stringify(response.data));
 			})
 			.catch(error => {
