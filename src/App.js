@@ -6,7 +6,6 @@ import CreateFastfoodForm from './components/fastfood/createFastfoodForm.compone
 import EditFastfoodForm from './components/fastfood/editFastfoodForm.component'
 import FastfoodList from './components/fastfood/fastfoodList.component'
 import Navbarnav from './components/navbar/navbar.component'
-import { Card, Row, Col } from 'reactstrap';
 
 class App extends Component {
 	render() {
