@@ -41,7 +41,7 @@ class FastfoodList extends Component {
                     </div>
                 )}
                 <br/><br/>
-                <Link to="/">Cadastrar fastfood</Link>
+                {/* <Link to="/">Cadastrar fastfood</Link> */}
             </div>
         )
     }
