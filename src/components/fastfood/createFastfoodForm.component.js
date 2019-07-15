@@ -74,7 +74,7 @@ class FastfoodForm extends Component {
 				<br /><br />
 				<button type="submit">Salvar</button>
 				<br /><br />
-				<Link to="/list">Lista de fastfoods</Link>
+				{/* <Link to="/list">Lista de fastfoods</Link> */}
 			</form>
 		)
 	}
