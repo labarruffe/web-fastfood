@@ -17,15 +17,15 @@ export default class Navbar extends Component {
   }
   render() {
     return (
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <Link to="/" class="nav-link active">FastfoodList</Link>
+        <ul className="nav nav-tabs">
+            <li className="nav-item">
+                <Link to="/" className="nav-link active">FastfoodList</Link>
             </li>
-            <li class="nav-item">
-                <Link to="/new" class="nav-link">CreateFastfoodForm</Link>
+            <li className="nav-item">
+                <Link to="/new" className="nav-link">CreateFastfoodForm</Link>
             </li>
-            <li class="nav-item">
-                <Link to="/edit/:id" class="nav-link">EditFastfoodForm</Link>
+            <li className="nav-item">
+                <Link to="/edit/:id" className="nav-link">EditFastfoodForm</Link>
             </li>
         </ul>
     );
