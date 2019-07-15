@@ -1,28 +1,24 @@
 import React, { Component } from 'react'
-import './App.css'
-import FastfoodForm from './components/fastfood/FastfoodForm'
-import FastfoodList from './components/fastfood/FastfoodList'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+import CreateFastfoodForm from './components/fastfood/createFastfoodForm.component'
+import EditFastfoodForm from './components/fastfood/editFastfoodForm.component'
+import FastfoodList from './components/fastfood/fastfoodList.component'
+import Navbarnav from './components/navbar/navbar.component'
 import { Card, Row, Col } from 'reactstrap';
 
 class App extends Component {
 	render() {
 		return (
-			<div className="App container">
-				<div>
-					<Row>
-						<Col sm="2">
-						</Col>
-						<Col sm="8">
-							<Card body>
-								<FastfoodForm />
-								<FastfoodList />
-							</Card>
-						</Col>
-						<Col sm="2">
-						</Col>
-					</Row>
+			<Router>
+				<div className="container">
+					<Navbarnav />
+					<Route path="/" exact component={FastfoodList} />
+					<Route path="/new" exact component={CreateFastfoodForm} />
+					<Route path="/edit/:id" exact component={EditFastfoodForm} />
 				</div>
-			</div>
+			</Router>
 		)
 	}
 }
