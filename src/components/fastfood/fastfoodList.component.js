@@ -58,7 +58,7 @@ export default class FastfoodList extends Component {
     
     fastfoodList() {
         return this.state.fastfoods.map(current => {
-            return <Fastfood fastfood={current} deleteFastfood={this.deleteFastfood} key={current.id}/>;
+            return <Fastfood fastfood={current} deleteFastfood={this.deleteFastfood} key={current._id}/>;
         })
     }
 
