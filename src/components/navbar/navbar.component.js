@@ -19,13 +19,10 @@ export default class Navbar extends Component {
     return (
         <ul className="nav nav-tabs">
             <li className="nav-item">
-                <Link to="/" className="nav-link active">FastfoodList</Link>
+                <Link to="/" className="nav-link active">Listar</Link>
             </li>
             <li className="nav-item">
-                <Link to="/new" className="nav-link">CreateFastfoodForm</Link>
-            </li>
-            <li className="nav-item">
-                <Link to="/edit/:id" className="nav-link">EditFastfoodForm</Link>
+                <Link to="/new" className="nav-link">Cadastar</Link>
             </li>
         </ul>
     );
