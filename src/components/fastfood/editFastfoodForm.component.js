@@ -49,7 +49,7 @@ export default class EditFastfoodForm extends Component {
 		}
 
 		axios
-		.put(`${this.baseUrl}/fastfoods/${this.props.match.params.id}`, fastfood)
+		.put(`${this.baseUrl}/fastfoods/${this.props.match.params._id}`, fastfood)
 		.then(response => {
 			alert('Fastfood atualizado com sucesso!\n' + JSON.stringify(response.data));
 			window.location = '/';

@@ -6,13 +6,15 @@ const Fastfood = props => (
     <div className="card text-center">
         <div className="card-body">
             <h5 className="card-title">{props.fastfood.name}</h5>
-            <p className="card-text">
-                {props.fastfood.ingredients.join(', ')}
-            </p>
+                <p className="card-text">
+                    {
+                        props.fastfood.ingredients.length > 1 ? props.fastfood.ingredients.join(', ') : props.fastfood.ingredients
+                    }
+                </p>
             <p className="card-text">{props.fastfood.price}</p>
         </div>
         <div className="card-footer text-muted">
-            <Link to={"/edit/" + props.fastfood.id}>editar</Link> | <a href="#" onClick={() => { props.deleteFastfood(props.fastfood.id)}}>deletar</a>
+            <Link to={"/edit/" + props.fastfood._id}>editar</Link> | <a href="#" onClick={() => { props.deleteFastfood(props.fastfood._id)}}>deletar</a>
         </div>
     </div>
 )
@@ -44,13 +46,14 @@ export default class FastfoodList extends Component {
     
     deleteFastfood(id) {
         axios
-        .delete(`${this.baseUrl}/fastfood/${id}`)
+        .delete(`${this.baseUrl}/fastfoods/${id}`)
         .then(response => {
+            console.log('this.state.fastfoods', this.state.fastfoods);
+            console.log('id', id);
+            // this.state({
+            //     fastfoods: this.state.fastfoods.filter(el => el.id !== id)
+            // })
             alert('Fastfood ' + id + ' deletado com sucesso!\n' + JSON.stringify(response.data));
-
-            this.state({
-                fastfoods: this.state.fastfoods.filter(el => el.id !== id)
-            })
         })
     }
     

@@ -15,7 +15,7 @@ class App extends Component {
 					<Navbarnav />
 					<Route path="/" exact component={FastfoodList} />
 					<Route path="/new" exact component={CreateFastfoodForm} />
-					<Route path="/edit/:id" exact component={EditFastfoodForm} />
+					<Route path="/edit/:_id" exact component={EditFastfoodForm} />
 				</div>
 			</Router>
 		)
