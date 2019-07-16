@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 export default class EditFastfoodForm extends Component {
-	baseUrl = 'http://localhost:4200';
+	baseUrl = 'http://localhost:3000/fastfood_store';
 
 	constructor(props) {
 		super(props);

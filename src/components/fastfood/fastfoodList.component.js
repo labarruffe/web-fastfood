@@ -16,7 +16,7 @@ const Fastfood = props => (
 )
 
 export default class FastfoodList extends Component {
-    baseUrl = 'http://localhost:4200';
+    baseUrl = 'http://localhost:3000/fastfood_store';
 
     constructor(props) {
         super(props);
