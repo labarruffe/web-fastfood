@@ -39,7 +39,7 @@ export default class FastfoodForm extends Component {
 
 	onSubmit(e) {
 		e.preventDefault();
-		console.log('this.state.price', parseFloat(this.state.price));
+
 		const ingredientsArray = this.state.ingredients.split(', ');
 		
 		const fastfood = {
