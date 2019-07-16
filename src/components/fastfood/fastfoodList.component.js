@@ -48,12 +48,11 @@ export default class FastfoodList extends Component {
         axios
         .delete(`${this.baseUrl}/fastfoods/${id}`)
         .then(response => {
-            console.log('this.state.fastfoods', this.state.fastfoods);
-            console.log('id', id);
-            // this.state({
-            //     fastfoods: this.state.fastfoods.filter(el => el.id !== id)
-            // })
-            alert('Fastfood ' + id + ' deletado com sucesso!\n' + JSON.stringify(response.data));
+            alert('Fastfood ' + id + ' deletado com sucesso!');
+
+            this.setState({
+                fastfoods: response.data
+            })
         })
     }
     
