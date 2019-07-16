@@ -6,7 +6,9 @@ const Fastfood = props => (
     <div className="card text-center">
         <div className="card-body">
             <h5 className="card-title">{props.fastfood.name}</h5>
-            <p className="card-text">{props.fastfood.ingredients}</p>
+            <p className="card-text">
+                {props.fastfood.ingredients.join(', ')}
+            </p>
             <p className="card-text">{props.fastfood.price}</p>
         </div>
         <div className="card-footer text-muted">
