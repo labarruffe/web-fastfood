@@ -7,7 +7,7 @@ const Fastfood = props => (
         <div className="card-body">
             <h5 className="card-title">{props.fastfood.name}</h5>
             <p className="card-text">{props.fastfood.ingredients}</p>
-            <a href="#" className="btn btn-primary">{props.fastfood.price}</a>
+            <p className="card-text">{props.fastfood.price}</p>
         </div>
         <div className="card-footer text-muted">
             <Link to={"/edit/" + props.fastfood.id}>editar</Link> | <a href="#" onClick={() => { props.deleteFastfood(props.fastfood.id)}}>deletar</a>
