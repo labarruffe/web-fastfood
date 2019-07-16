@@ -39,13 +39,13 @@ export default class FastfoodForm extends Component {
 
 	onSubmit(e) {
 		e.preventDefault();
-
+		console.log('this.state.price', parseFloat(this.state.price));
 		const ingredientsArray = this.state.ingredients.split(', ');
 		
 		const fastfood = {
 			name: this.state.name,
 			ingredients: ingredientsArray,
-			price: this.state.price
+			price: parseFloat(this.state.price)
 		}
 
 		axios
